@@ -1,0 +1,277 @@
+/* Reset and Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+.label {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    /* background-color: #f6eec9; */
+     /* Optional background color */
+}
+
+.middle {
+    display: flex;
+    flex-direction: column; /* Mobile first */
+    align-items: center; /* Center items */
+}
+
+.midimg {
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin: 30px;
+}
+
+.navitems {
+    display: flex;
+    flex-direction: column; /* Stack links on mobile */
+    align-items: center;
+}
+
+.navitems a,
+.navitems button {
+    text-decoration: none;
+    font-size: 18px; /* Base font size */
+    color: #d90320;
+    margin: 5px 0; /* Spacing between items */
+}
+
+.navitems button {
+    background-color: #d90320;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Section Styles */
+.secbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items on mobile */
+    align-items: center;
+    padding: 20px;
+}
+.aboutimg{
+    height: 300px;
+    /* width: 50%; */
+}
+.homeimg{
+    width: 50%;
+}
+.text {
+    text-align: center; /* Center text */
+    width: 50%;
+}
+
+.explore {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #d90320;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Varieties Title */
+.varities {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Overall Card Layout */
+.overall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: black;
+    color: #d90320;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.images {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 500px) {
+    .middle {
+        flex-direction: row; /* Horizontal layout for medium screens */
+        justify-content: space-between; /* Space between logo and nav */
+    }
+
+    .navitems {
+        flex-direction: row; /* Horizontal navigation */
+    }
+
+    .navitems a,
+    .navitems button {
+        margin: 0 10px; /* Adjust margin */
+    }
+}
+
+ @media only screen and (min-width:500px) and (max-width:800px) {
+    .navitems a,
+    .navitems button {
+        font-size: 20px; /* Increase font size for larger screens */
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .label {
+        height: 200px; /* Set a fixed height for the header */
+        width: 100%;
+    }
+    .middle{
+        width: 100%;
+    }
+    .midimg{
+        width: 50%;
+    }
+    .navitems{
+        width: 50%;
+    }
+    .secbox {
+        flex-direction: row; /* Side by side layout */
+    }
+
+    .text {
+        width: 50%; /* Half width for text */
+    }
+    
+    .homeimg {
+        width: 50%; /* Half width for image */
+    }
+
+    .explore {
+        font-size: 18px; /* Larger button text */
+    }
+    .middle{
+        width: 100%;
+        /* position: relative; */
+    }
+    .midimg{
+        width: 40%;
+        /* position: absolute; */
+        /* left: 0; */
+        /* top: 0; */
+    }
+    .navitems{
+        width: 60%;
+    }
+    }
+    .navitems a{
+        font-size:15px;
+    }
+    .logo{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    
+
+@media (min-width: 800px) {
+    .label{
+        width: 100%;
+    }
+    .middle{
+        width: 100%;
+    }
+    .midimg{
+        width: 40%;
+    }
+    .logo{
+        height: 300px;
+        width: 300px;
+    }
+    .navitems{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navitems a{
+        font-size: 27px;
+    }
+    .varities {
+        font-size: 28px; /* Larger title for desktop */
+    }
+
+    .overall {
+        grid-template-columns: auto auto auto;
+    }
+
+    .card {
+        height: 300px; /* Adjust card height */
+        /* grid-template-columns: auto auto auto; */
+    }
+    .secbox{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       
+    }
+    .text{
+        width: 50%;
+        /* display: flex; */
+    }
+    .homeimg{
+        width: 50%;
+    }
+}
+/* Existing CSS... */
+
+/* Hover Effects */
+.navitems a:hover {
+    color: #ffffff; /* Change text color on hover */
+    background-color: #d90320; /* Add background color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.navitems button:hover {
+    background-color: #ffffff; /* Change background to white */
+    color: #d90320; /* Change text color */
+    border: 2px solid #d90320; /* Add border */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.explore:hover {
+    background-color: #ffffff; /* Change background to white */
+    color: #d90320; /* Change text color */
+    text-decoration: underline; /* Underline text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
